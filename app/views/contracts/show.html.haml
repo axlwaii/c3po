@@ -1,0 +1,19 @@
+%h4 Verträge
+
+= render 'navigation', current_action: 'show'
+.col-md-8
+  .box
+    %ul
+      %li
+        %label Vertragspartner
+        = resource.partner
+      %li
+        %label Bezeichnung
+        = resource.title
+      %li
+        %label Zeitraum
+        = "#{resource.started_at} - #{resource.ended_at}"
+      %li
+        %label Details
+        = resource.description
+

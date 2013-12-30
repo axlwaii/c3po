@@ -1,0 +1,22 @@
+.box
+  = form_for resource, :html =>{ class: 'form-horizontal', role: 'form' } do |f|
+    .form-group
+      %label.form-label Vertragspartner:
+      = text_field_tag :partner
+    .form-group
+      %label.form-label Bezeichnung:
+      = text_field_tag :title
+    .form-group
+      %label.form-label Beginn:
+      = f.date_select :started_at
+    .form-group
+      %label.form-label Ende:
+      = f.date_select :ended_at
+
+    %hr
+    .form-group
+      %label.form-label Details:
+      = f.text_area :description
+
+    %center
+      = f.submit 'Speichern', class: 'btn btn-primary form-submit'
