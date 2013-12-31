@@ -9,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'haml'
 gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'devise'
 
 group :test do
   gem "shoulda", "~> 3.3.2"
