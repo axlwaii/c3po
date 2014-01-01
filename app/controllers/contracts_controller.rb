@@ -1,5 +1,6 @@
 class ContractsController < ActionController::Base
   inherit_resources
+  before_filter :authenticate_user!
   layout 'application'
 
   private
