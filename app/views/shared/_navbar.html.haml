@@ -24,6 +24,4 @@
             %b.caret
           %ul.dropdown-menu
             %li
-              %a{href: "#"} Konfiguration
-            %li
-              = link_to 'Ausloggen', destroy_user_session_path
+              = link_to 'Ausloggen', destroy_user_session_path, method: :delete
