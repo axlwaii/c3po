@@ -2,10 +2,10 @@
   = form_for resource, :html =>{ class: 'form-horizontal', role: 'form' } do |f|
     .form-group
       %label.form-label Vertragspartner:
-      = text_field_tag :partner
+      = f.text_field :partner
     .form-group
       %label.form-label Bezeichnung:
-      = text_field_tag :title
+      = f.text_field :title
     .form-group
       %label.form-label Beginn:
       = f.date_select :started_at
