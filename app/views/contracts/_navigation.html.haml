@@ -1,8 +1,8 @@
 .col-md-8.table-nav
   %ul.nav.nav-tabs
     %li{ class: "#{ current_action == 'index' ? 'active' : '' }" }
-      = link_to contracts_path do
+      = link_to user_contracts_path(current_user) do
         %span.glyphicon.glyphicon-align-justify
     %li{ class: "#{ current_action == 'new' ? 'active' : '' }" }
-      = link_to new_contract_path do
+      = link_to new_user_contract_path(current_user) do
         %span.glyphicon.glyphicon-plus

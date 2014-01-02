@@ -21,10 +21,10 @@
           %td
           %td
           %td
-            = link_to contract do
+            = link_to [current_user, contract] do
               %span.glyphicon.glyphicon-eye-open
-            = link_to edit_contract_path(contract) do
+            = link_to edit_user_contract_path(contract, current_user) do
               %span.glyphicon.glyphicon-wrench
-            = link_to contract, method: :delete do
+            = link_to [current_user, contract], method: :delete do
               %span.glyphicon.glyphicon-trash
 
