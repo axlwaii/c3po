@@ -6,7 +6,7 @@ class ContractsController < ActionController::Base
   private
 
   def contract_attributes
-    [:partner, :title, :started_at, :ended_at]
+    [:costs, :cost_interval, :partner, :title, :started_at, :ended_at]
   end
 
   def permitted_params

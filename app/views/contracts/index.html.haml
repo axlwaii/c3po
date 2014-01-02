@@ -7,26 +7,24 @@
       %tr.table-head
         %th Vertragspartner
         %th Bezeichnung
-        %th Beginn
-        %th Ende
-        %th Status
+        %th Endet
+        %th Kosten
+        %th Tags
         %th
         %th
       - collection.each do |contract|
         %tr
           %td= contract.partner
           %td= contract.title
-          %td= contract.started_at
-          %td= contract.ended_at
+          %td= contract.ended_at.strftime("%b %Y")
+          %td= "10 € / Monat"
           %td
-            .label
+          %td
           %td
             = link_to contract do
               %span.glyphicon.glyphicon-eye-open
-          %td
             = link_to edit_contract_path(contract) do
               %span.glyphicon.glyphicon-wrench
-          %td
             = link_to contract, method: :delete do
               %span.glyphicon.glyphicon-trash
 

@@ -11,7 +11,17 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li.navlink
+          = link_to 'Home', user_dashboard_path(current_user)
+        %li.navlink
           = link_to 'Verträge', contracts_path
+        %li.navlink
+          = link_to 'Ausgaben', "#"
+        %li.navline
+          = link_to 'Termine', "#"
+        %li.navlink
+          = link_to 'Tags', "#"
+        %li.navlink
+          = link_to 'Notizen', "#"
       %ul.nav.navbar-nav.navbar-right
         %form.navbar-form.navbar-left.search-form{role: "search"}
           .form-group
