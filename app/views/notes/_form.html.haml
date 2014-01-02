@@ -1,0 +1,13 @@
+.box
+  = form_for resource, :html =>{ class: 'form-horizontal', role: 'form' } do |f|
+    .form-group
+      %label.form-label Titel:
+      = f.text_field :title
+
+    %hr
+    .form-group
+      %label.form-label Inhalt:
+      = f.text_area :content
+
+    %center
+      = f.submitcontent', class: 'btn btn-primary form-submit'

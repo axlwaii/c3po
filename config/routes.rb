@@ -4,7 +4,8 @@ C3po::Application.routes.draw do
 
   resources :users, only: [] do
     get :dashboard
+    resources :contracts
+    resources :notes
   end
 
-  resources :contracts
 end
