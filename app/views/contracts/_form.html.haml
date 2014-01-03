@@ -15,6 +15,12 @@
         %br
         %small (wenn befristet)
       = f.date_select :ended_at, { include_blank: true, default: nil }
+    .form-group
+      %label.form-label Kosten:
+      = f.text_field :costs
+      = " € / "
+      = f.select :cost_interval, options_for_select([["Jahr"],["Monat"],["Woche"], ["Tag"]])
+
 
     %hr
     .form-group
