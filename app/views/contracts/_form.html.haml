@@ -19,7 +19,7 @@
       %label.form-label Kosten:
       = f.text_field :costs
       = " € / "
-      = f.select :cost_interval, options_for_select([["Jahr"],["Monat"],["Woche"], ["Tag"]])
+      = f.select :cost_interval, options_for_select([[nil], ["Jahr"],["Monat"],["Woche"], ["Tag"]])
 
 
     %hr
