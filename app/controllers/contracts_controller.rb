@@ -3,6 +3,12 @@ class ContractsController < ActionController::Base
   before_filter :authenticate_user!
   layout 'application'
 
+  def create
+    create!
+    resource.user_id = params[:user_id]
+    resource.save!
+  end
+
   private
 
   def contract_attributes
@@ -14,7 +20,7 @@ class ContractsController < ActionController::Base
   end
 
   def collection
-    @contracts = Contract.order('ended_at DESC')
+    @contracts = current_user.contracts.order('ended_at DESC')
   end
 
 end

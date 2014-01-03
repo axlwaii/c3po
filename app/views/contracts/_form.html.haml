@@ -1,5 +1,5 @@
 .box
-  = form_for resource, :html =>{ class: 'form-horizontal', role: 'form' } do |f|
+  = form_for [current_user, resource], :html => { class: 'form-horizontal', role: 'form' } do |f|
     .form-group
       %label.form-label Vertragspartner:
       = f.text_field :partner
