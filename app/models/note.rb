@@ -1,5 +1,11 @@
 class Note < ActiveRecord::Base
 
+  # associations
+  #
+  #
+
+  belongs_to :user
+
   # validations
   #
   #
