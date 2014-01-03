@@ -10,8 +10,11 @@
       %label.form-label Beginn:
       = f.date_select :started_at
     .form-group
-      %label.form-label Ende:
-      = f.date_select :ended_at
+      %label.form-label
+        Ende:
+        %br
+        %small (wenn befristet)
+      = f.date_select :ended_at, { include_blank: true, default: nil }
 
     %hr
     .form-group
