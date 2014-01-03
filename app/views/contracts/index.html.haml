@@ -7,7 +7,7 @@
       %tr.table-head
         %th Vertragspartner
         %th Bezeichnung
-        %th Endet
+        %th Ende
         %th Kosten
         %th Tags
         %th
@@ -17,7 +17,7 @@
           %td= contract.partner
           %td= contract.title
           %td= contract.try(:ended_at).try(:strftime, "%b %Y")
-          %td= "10 € / Monat"
+          %td= "#{contract.costs} #{contract.cost_interval.present? ? "/" + contract.cost_interval : "" }"
           %td
           %td
           %td
