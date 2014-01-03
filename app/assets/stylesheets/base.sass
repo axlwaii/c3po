@@ -58,9 +58,34 @@ ul
   float: rigth
   clear: both
 
-.notices
+#notices
   width: 250px
+  position: relative
   padding: 5px
+  margin: 1em 0 3em
+  color: #000
+  background: #2E2E2E
+  border-radius: 5px
+
+  &:after
+    content: ""
+    position: absolute 
+    border-style: solid
+    border-color: #2E2E2E transparent
+    display: block
+    width: 0 
+    top: -15px     
+    right: 80px 
+    bottom: auto
+    left: 205px
+    border-width: 0 15px 15px 
+
+.alert-success, .alert-danger
+  padding-top: 10px
+  padding-left: 10px
+  padding-right: 10px
+  padding-bottom: 5px
+  background-color: #2E2E2E
 
 .btn-devise
   width: 170px

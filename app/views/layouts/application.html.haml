@@ -7,14 +7,15 @@
     = csrf_meta_tags
   %body
     = render 'shared/navbar'
-    .col-md-12
-      %center
-        .notices
-          .alert-success
-            = flash[:notice]
-          .alert-danger
-            = flash[:alert]
     .col-md-2
+      - if flash[:notice].present? || flash[:alert].present?
+        #notices
+          - if flash[:notice].present?
+            .alert-success
+              = flash[:notice]
+          - if flash[:alert].present?
+            .alert-danger
+              = flash[:alert]
     .col-md-10
       .base-container
         = yield
