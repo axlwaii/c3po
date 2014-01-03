@@ -12,9 +12,9 @@
     .form-group
       %label.form-label
         Ende:
-        %br
-        %small (wenn befristet)
       = f.date_select :ended_at, { include_blank: true, default: nil }
+      %small
+        %strong (nur wenn befristet)
     .form-group
       %label.form-label Kosten:
       = f.text_field :costs
