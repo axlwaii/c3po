@@ -14,6 +14,7 @@ gem 'rails_serve_static_assets'
 
 group :test do
   gem "shoulda", "~> 3.3.2"
+  gem "shoulda-matchers"
 end
 
 group :development, :test do
