@@ -1,7 +1,7 @@
 %h4 Verträge
 
 = render 'navigation', current_action: 'index'
-.col-md-8
+.col-md-12
   .box
     %table.table.table-hover
       %tr.table-head
@@ -27,4 +27,3 @@
               %span.glyphicon.glyphicon-wrench
             = link_to [current_user, contract], method: :delete do
               %span.glyphicon.glyphicon-trash
-
