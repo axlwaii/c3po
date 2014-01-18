@@ -11,6 +11,7 @@ gem 'haml'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'devise'
 gem 'rails_serve_static_assets'
+gem 'kaminari'
 
 group :test do
   gem "shoulda", "~> 3.3.2"
