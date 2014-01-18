@@ -20,7 +20,7 @@
           %td= "#{contract.costs} #{contract.cost_interval.present? ? " € / " + contract.cost_interval : "" }"
           %td
           %td
-          %td
+          %td.pull-right
             = link_to [current_user, contract] do
               %span.glyphicon.glyphicon-eye-open
             = link_to edit_user_contract_path(current_user, contract) do

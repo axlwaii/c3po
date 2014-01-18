@@ -1,13 +1,19 @@
 %h4 Notizbuch
 
 = render 'navigation', current_action: 'index'
-.col-md-8
+.col-md-12
   .box
-    - collection.each do |note|
-      = note.title
-      = link_to [current_user, note] do
-        %span.glyphicon.glyphicon-eye-open
-      = link_to edit_user_note_path(current_user, note) do
-        %span.glyphicon.glyphicon-wrench
-      = link_to [current_user, note], method: :delete do
-        %span.glyphicon.glyphicon-trash
+    %table.table.table-hover
+      %tr.table-head
+        %th Titel
+        %th
+      %tr
+        - collection.each do |note|
+          %td.note-title= note.title
+          %td.pull-right
+            = link_to [current_user, note] do
+              %span.glyphicon.glyphicon-eye-open
+            = link_to edit_user_note_path(current_user, note) do
+              %span.glyphicon.glyphicon-wrench
+            = link_to [current_user, note], method: :delete do
+              %span.glyphicon.glyphicon-trash

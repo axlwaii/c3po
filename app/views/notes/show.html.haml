@@ -1,15 +1,12 @@
 %h4 Notizen
 
 = render 'navigation', current_action: 'show'
-.col-md-8
+.col-md-12
   .box
-    %ul
-      %li
-        %label Titel
-        = resource.title
-      %li
-        %label Inhalt
-        = resource.content
-      %li
-        %label Erstellt am
-        = resource.created_at
+    %table.table.table-hover
+      %tr.table-head
+        %th= resource.title
+        %th.pull-right= "erstellt am #{resource.created_at}"
+      %tr
+        %td
+          = resource.content
