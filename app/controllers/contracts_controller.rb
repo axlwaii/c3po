@@ -20,7 +20,7 @@ class ContractsController < ActionController::Base
   end
 
   def collection
-    @contracts = current_user.contracts.order('ended_at DESC').page(params[:page]).per(8)
+    @contracts = current_user.contracts.order('ended_at DESC').page(params[:page]).per(7)
   end
 
 end
