@@ -1,5 +1,5 @@
 .box
-  = form_for resource, :html =>{ class: 'form-horizontal', role: 'form' } do |f|
+  = form_for [current_user, resource], :url => user_notes_path, :html =>{ class: 'form-horizontal', role: 'form' } do |f|
     .form-group
       %label.form-label Titel:
       = f.text_field :title
@@ -10,4 +10,4 @@
       = f.text_area :content
 
     %center
-      = f.submitcontent', class: 'btn btn-primary form-submit'
+      = f.submit 'Speichern', class: 'btn btn-primary form-submit'

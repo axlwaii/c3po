@@ -1,13 +1,13 @@
-%h4 Verträge
+%h4 Notizbuch
 
 = render 'navigation', current_action: 'index'
 .col-md-8
   .box
     - collection.each do |note|
       = note.title
-      = link_to note do
+      = link_to [current_user, note] do
         %span.glyphicon.glyphicon-eye-open
-      = link_to edit_note_path(note) do
+      = link_to edit_user_note_path(current_user, note) do
         %span.glyphicon.glyphicon-wrench
-      = link_to note, method: :delete do
+      = link_to [current_user, note], method: :delete do
         %span.glyphicon.glyphicon-trash

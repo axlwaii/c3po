@@ -3,6 +3,12 @@ class NotesController < ActionController::Base
   before_filter :authenticate_user!
   layout 'application'
 
+  def create
+    create!
+    resource.user_id = params[:user_id]
+    resource.save!
+  end
+
   private
 
   def note_attributes
@@ -14,7 +20,7 @@ class NotesController < ActionController::Base
   end
 
   def collection
-    @contracts = Note.order('created_at DESC')
+    @notes = Note.order('created_at DESC').page(params[:page]).per(1)
   end
 
 end
