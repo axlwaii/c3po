@@ -33,6 +33,9 @@ GEM
     bourne (1.1.2)
       mocha (= 0.10.5)
     builder (3.1.4)
+    ckeditor (4.0.8)
+      mime-types
+      orm_adapter
     devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -146,6 +149,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.0.3.0)
+  ckeditor
   devise
   haml
   inherited_resources (~> 1.4.1)
