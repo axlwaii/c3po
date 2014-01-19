@@ -12,7 +12,7 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'devise'
 gem 'rails_serve_static_assets'
 gem 'kaminari'
-gem 'ckeditor'
+gem 'ckeditor_rails'
 
 group :test do
   gem "shoulda", "~> 3.3.2"

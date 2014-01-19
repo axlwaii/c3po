@@ -5,7 +5,7 @@
       = f.text_field :title
 
     %hr
-      = f.cktext_area :content
+      = f.text_area :content, class: 'ckeditor'
 
     %center
       = f.submit 'Speichern', class: 'btn btn-primary form-submit'
