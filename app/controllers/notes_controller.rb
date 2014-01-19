@@ -22,5 +22,4 @@ class NotesController < ActionController::Base
   def collection
     @notes = Note.order('created_at DESC').page(params[:page]).per(1)
   end
-
 end

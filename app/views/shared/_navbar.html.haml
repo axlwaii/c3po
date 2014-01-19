@@ -14,13 +14,13 @@
         %li.navlink
           = link_to 'Home', user_dashboard_path(current_user)
         %li.navlink
+          = link_to 'Notizbuch', user_notes_path(current_user)
+        %li.navlink
           = link_to 'Verträge', user_contracts_path(current_user)
         %li.navline
           = link_to 'Termine', "#"
         %li.navlink
           = link_to 'Tags', "#"
-        %li.navlink
-          = link_to 'Notizbuch', user_notes_path(current_user)
       %ul.nav.navbar-nav.navbar-right
         %form.navbar-form.navbar-left.search-form{role: "search"}
           .form-group
