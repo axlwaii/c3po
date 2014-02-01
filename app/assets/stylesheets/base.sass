@@ -2,18 +2,21 @@
 
 /* Base layout */
 
+.container
+  padding: 0
+  width: 100%
+
 .left-workspace
   background-color: #dcdcdc
-  margin-left: 5px
   height: 550px
-  width: 300px
+  padding: 0 5px
   border-radius: 2px
   border: 1px solid black
 
 .center-workspace
   background-color: white
   height: 550px
-  width: 1030px
+  // width: 1030px
 
 .body
   margin-top: 8px
@@ -36,9 +39,6 @@
   margin-top: 5px
   padding-top: 0
   padding-bottom: 0
-  padding-left: 250px
-  margin-right: 30px
-  width: 280px
 
 .nav-info
   color: white
@@ -55,9 +55,9 @@
         font-weigth: bold
         color: white
         &:hover
-          color: #ccc 
+          color: #ccc
 
-table 
+table
   td, th
     border: 0px !important
 label
@@ -107,16 +107,16 @@ ul
 
   &:after
     content: ""
-    position: absolute 
+    position: absolute
     border-style: solid
     border-color: #2E2E2E transparent
     display: block
-    width: 0 
-    top: -18px     
-    right: 80px 
+    width: 0
+    top: -18px
+    right: 80px
     bottom: auto
     left: 226px
-    border-width: 0 22px 35px 
+    border-width: 0 22px 35px
 
 .alert-success, .alert-danger
   padding: 5px
@@ -134,14 +134,13 @@ ul
   padding-top: 20px
 
 .box-devise
-  margin-top: 50px
+  margin: 0px auto
   .form-group
     padding-left: 15px
   @extend .box
   width: 270px
   overflow: auto
   padding: 50px
-  margin-left: 100px
 
 /* -- end Devise templates --- */
 
