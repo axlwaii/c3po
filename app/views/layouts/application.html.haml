@@ -7,28 +7,8 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body.body
-    = render 'shared/navbar'
-    .col-md-2.left-workspace
-      #notices
-        - if not user_signed_in?
-          .alert-danger
-            Robin, is this you? Think I need to renew these optical modules.
-        - elsif flash[:notice].present? || flash[:alert].present?
-          - if flash[:notice].present?
-            .alert-success
-              = flash[:notice]
-          - if flash[:alert].present?
-            .alert-danger
-              = flash[:alert]
-        - else
-          .alert-danger
-            I'm speechless.
-    .col-md-10.center-workspace
-      .base-container
-        = yield
-    .col-md-12.footer
-      %center
-        © Robin Neumann | 2013 | Be aware. He's nearly passing the Turing-Test.
+    - if user_signed_in?
+      = render 'shared/navbar'
     .container
       = yield
     .container
