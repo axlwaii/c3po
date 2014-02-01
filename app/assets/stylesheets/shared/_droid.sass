@@ -1,0 +1,35 @@
+.droid-container
+  margin-top: 20px
+  width: 100%
+  .droid
+    margin: 0 auto
+    width: 270px
+  img
+    height: 40px
+    margin: 0px 5px 20px 5px
+  .speech-bubble
+    background: #2E2E2E
+    border-radius: 5px
+    color: #a94442
+    margin: 1em 0 3em
+    padding: 10px 15px
+    position: relative
+
+    &:after
+      content: ""
+      position: absolute
+      border-style: solid
+      border-color: #2E2E2E transparent
+      display: block
+      width: 0
+      top: -26px
+      right: 80px
+      bottom: auto
+      left: 0%
+      border-width: 0 20px 30px
+
+  .rs-brand
+    display: inline
+    font-size: 32px
+    font-family: 'Audiowide', cursive
+    text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF

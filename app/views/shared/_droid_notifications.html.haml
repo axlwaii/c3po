@@ -1,0 +1,12 @@
+/ you can pass a custom message: :message => yourVariable
+.droid-container
+  .droid
+    = image_tag("droid_head.png", { height: 40 })
+    .rs-brand
+      RS Threepio
+    .speech-bubble
+      - if defined? message
+        = message
+      - else
+        "Robin, is this you? Think I need to renew these optical modules."
+

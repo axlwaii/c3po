@@ -28,3 +28,4 @@
             = link_to [current_user, contract], method: :delete do
               %span.glyphicon.glyphicon-trash
       = paginate collection
+  = render "/shared/droid_notifications", message: "Check your contracts"
